@@ -1,6 +1,5 @@
 'use strict';
 
-var _ = require('lodash');<% if (filters.mongoose) { %>
 var <%= classedName %> = require('./<%= name %>.model');<% } %>
 
 // Insert endpoints below
