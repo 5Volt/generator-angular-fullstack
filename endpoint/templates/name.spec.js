@@ -4,18 +4,10 @@ var should = require('should');
 var app = require('../../app');
 var request = require('supertest');
 
-describe('GET <%= route %>', function() {
+describe('GET <%= name %>', function() {
 
   // Insert tests below
-  it('should respond with JSON array', function(done) {
-    request(app)
-      .get('<%= route %>')
-      .expect(200)
-      .expect('Content-Type', /json/)
-      .end(function(err, res) {
-        if (err) return done(err);
-        res.body.should.be.instanceof(Array);
-        done();
-      });
+  it.skip('#<%= endpoint%>', function(done) {
+    done(new Error('unimplemented test'));
   });
 });
