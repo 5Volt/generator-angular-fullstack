@@ -55,6 +55,32 @@ Generator.prototype.registerEndpoint = function registerEndpoint() {
     ngUtil.rewriteFile(routeConfig);
   }
 
+
+  var dest = this.config.get('endpointDirectory') || 'server/api/' + this.name;
+
+  var endpointRoutesConfig = {
+    file: dest + '/index.js',
+    needle: this.config.get('routesNeedle'),
+    splicable: [
+      "router.get('/"+this.name+"', controller."+this.name+");"
+    ]
+  };
+
+  var endpointConfig = {
+    file.dest + '/'+this.name+'.controller.js',
+    needle: this.config.get('endpointsNeedle'),
+    splicable: [
+      "exports."+this.name+" = function(req, res){
+         //TODO(1)@unimplemented: auto-generated Method
+         res.send(500, 'unimplemented');
+      }"
+    ]
+  };
+
+  ngUtil.rewriteFile(endpointRoutesConfig);
+  ngUtil.rewriteFile(endpointConfig);
+
+
   if (this.filters.socketio) {
     if(this.config.get('insertSockets')) {
       var socketConfig = {

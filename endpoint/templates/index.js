@@ -5,6 +5,7 @@ var controller = require('./<%= name %>.controller');
 
 var router = express.Router();
 
+// Insert routes below
 router.get('/', controller.index);<% if(filters.mongoose) { %>
 router.get('/:id', controller.show);
 router.post('/', controller.create);

@@ -6,6 +6,7 @@ var request = require('supertest');
 
 describe('GET <%= route %>', function() {
 
+  // Insert tests below
   it('should respond with JSON array', function(done) {
     request(app)
       .get('<%= route %>')

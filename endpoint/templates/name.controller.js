@@ -3,6 +3,7 @@
 var _ = require('lodash');<% if (filters.mongoose) { %>
 var <%= classedName %> = require('./<%= name %>.model');<% } %>
 
+// Insert endpoints below
 // Get list of <%= name %>s
 exports.index = function(req, res) {<% if (!filters.mongoose) { %>
   res.json([]);<% } %><% if (filters.mongoose) { %>
