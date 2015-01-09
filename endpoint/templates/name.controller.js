@@ -4,6 +4,7 @@ const db = require('purdb');
 const q = require('q');
 const reporter = require('reporter');
 
+<% if (filters.mongoose) { %>
 var <%= classedName %> = require('./<%= name %>.model');<% } %>
 
 // Insert endpoints below
