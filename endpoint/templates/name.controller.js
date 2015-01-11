@@ -1,5 +1,3 @@
-'use strict';
-
 const db = require('purdb');
 const q = require('q');
 const reporter = require('reporter');

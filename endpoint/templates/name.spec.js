@@ -1,5 +1,3 @@
-'use strict';
-
 describe('GET <%= name %>', function() {
 
   // Insert tests below
