@@ -65,7 +65,7 @@ Generator.prototype.registerEndpoint = function registerEndpoint() {
     splicable: [
       "exports."+this.endpoint+" = function(req, res){\n"+
       "  //TODO(1)@unimplemented: auto-generated Method\n"+
-      "  res.send(500, 'unimplemented');\n"+
+      "  res.status(500).send('unimplemented');\n"+
       "};\n"
     ]
   };
